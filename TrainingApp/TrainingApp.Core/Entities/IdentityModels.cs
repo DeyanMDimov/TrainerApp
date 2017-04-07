@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using TrainingApp.Entities;
 
 namespace TrainingApp.Models
 {
@@ -19,20 +20,6 @@ namespace TrainingApp.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public DbSet<Entry> Entries { get; set; }
-        public DbSet<Person> People { get; set;}
-        public DbSet<Stack> Stacks { get; set; }
-        public DbSet<Supplement> Supplements { get; set; }
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        {
-        }
-        
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-    }
+    
+    
 }

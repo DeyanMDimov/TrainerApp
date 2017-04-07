@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace TrainingApp.Models
+namespace TrainingApp.Entities
 {
     public class Entry
     {

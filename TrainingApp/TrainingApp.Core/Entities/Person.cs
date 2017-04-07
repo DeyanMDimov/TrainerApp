@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using TrainingApp.Models;
 
-namespace TrainingApp.Models
+namespace TrainingApp.Entities
 {
     public class Person
     {

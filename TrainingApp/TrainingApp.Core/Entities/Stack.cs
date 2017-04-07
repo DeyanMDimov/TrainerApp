@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace TrainingApp.Models
+namespace TrainingApp.Entities
 {
     public class Stack
     {

@@ -9,7 +9,7 @@ using TrainingApp.Models;
 namespace TrainingApp.Controllers
 {
 
-    [Authorize]
+    //[Authorize]
     public class EntryController : ApiController
     {
         private ApplicationDbContext _context;
@@ -20,18 +20,20 @@ namespace TrainingApp.Controllers
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
             var Entries = _context.Entries.ToList();
-            return new string[] { "value1", "value2" };
+            
+            return Ok(Entries);
         }
 
         // GET api/values/5
-        public Entry Get(int id)
-        {    
+        public IHttpActionResult Get(int id)
+        {
+            var Entries = _context.Entries.ToList();
             var selectedEntry = _context.Entries.SingleOrDefault(i => i.EntryID == id);
             
-            return selectedEntry;
+            return Ok(selectedEntry);
         }
 
         // POST api/values
